@@ -422,11 +422,6 @@
               <FileType>5</FileType>
               <FilePath>.\led.h</FilePath>
             </File>
-            <File>
-              <FileName>3.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\3.c</FilePath>
-            </File>
           </Files>
         </Group>
       </Groups>
