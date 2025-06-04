@@ -8,32 +8,27 @@ void Delay(int iTimeMillis) {
 	for (uiCounter = 0; uiCounter < uiTime; uiCounter++) {}
 }
 
-enum LedState{LED_LEFT, LED_RIGHT};
+enum LedState{LED_STOP, LED_RIGHT};
 
 int main() {
-	enum LedState eLedState = LED_LEFT;
-    unsigned int uiCount = 0;
+	enum LedState eLedState = LED_RIGHT;
 	
 	LedInit();
 	
 	while(1){
 	switch(eLedState){
-	case LED_LEFT:
-		if (uiCount%3==0){
-			eLedState = LED_RIGHT;
-		}else{
-			LedStepLeft();
-            uiCount++;
-		}
-		break;
+	case LED_STOP:
+		if (ReadButton()==BUTTON_1){
+            eLedState = LED_RIGHT;
+        }
+        break;
 	
 	case LED_RIGHT:
-		if (uiCount%3==0){
-			eLedState = LED_LEFT;
+		if (ReadButton()==BUTTON_0){
+            eLedState = LED_STOP;
 		}else{
-			LedStepRight();
-            uiCount++;
-		}
+            LedStepRight();
+        }
 		break;
 	
 	}
