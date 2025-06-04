@@ -1,0 +1,83 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\users\kacperjelonek\Documents\studia\embed\funkcje\testy\testy.uvproj
+Project File Date:  06/04/2025
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Startup.s...
+compiling dekodowanie.c...
+konwersje.h(4): warning:  #1-D: last line of file ends without a newline
+dekodowanie.c(82): error:  #513: a value of type "char *" cannot be assigned to an entity of type "struct Token *"
+dekodowanie.c(84): error:  #167: argument of type "struct Token *" is incompatible with parameter of type "char *"
+dekodowanie.c(86): error:  #167: argument of type "struct Token *" is incompatible with parameter of type "char *"
+dekodowanie.c(90): error:  #513: a value of type "struct Token *" cannot be assigned to an entity of type "char *"
+compiling konwersje.c...
+konwersje.h(4): warning:  #1-D: last line of file ends without a newline
+compiling lancuchyznakowe.c...
+compiling testy.c...
+./konwersje.h(4): warning:  #1-D: last line of file ends without a newline
+testy.c(6): warning:  #47-D: incompatible redefinition of macro "NULL" (declared at line 48 of "C:\Keil\ARM\ARMCC\bin\..\include\stdio.h")
+".\testy.axf" - 4 Errors, 4 Warning(s).
+Target not created
+Clean started: Project: 'testy'
+   deleting intermediate output files for target 'Target 1'
+Build target 'Target 1'
+assembling Startup.s...
+compiling dekodowanie.c...
+dekodowanie.c(184): error:  #29: expected an expression
+dekodowanie.c(184): error:  #20: identifier "i" is undefined
+compiling konwersje.c...
+compiling testy.c...
+./konwersje.h(4): warning:  #1-D: last line of file ends without a newline
+testy.c(6): warning:  #47-D: incompatible redefinition of macro "NULL" (declared at line 48 of "C:\Keil\ARM\ARMCC\bin\..\include\stdio.h")
+compiling operacje_proste.c...
+".\testy.axf" - 2 Errors, 2 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling dekodowanie.c...
+compiling konwersje.c...
+compiling testy.c...
+testy.c(6): warning:  #47-D: incompatible redefinition of macro "NULL" (declared at line 48 of "C:\Keil\ARM\ARMCC\bin\..\include\stdio.h")
+compiling operacje_proste.c...
+linking...
+.\testy.axf: Error: L6200E: Symbol eCompareString multiply defined (by operacje_proste.o and dekodowanie.o).
+.\testy.axf: Error: L6200E: Symbol eHexStringToUInt multiply defined (by konwersje.o and dekodowanie.o).
+.\testy.axf: Error: L6200E: Symbol ReplaceCharactersInString multiply defined (by operacje_proste.o and dekodowanie.o).
+".\testy.axf" - 3 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling dekodowanie.c...
+dekodowanie.c(90): warning:  #223-D: function "eCompareString" declared implicitly
+dekodowanie.c(108): warning:  #223-D: function "eHexStringToUInt" declared implicitly
+dekodowanie.c(125): warning:  #223-D: function "ReplaceCharactersInString" declared implicitly
+linking...
+Program Size: Code=8416 RO-data=116 RW-data=52 ZI-data=1532  
+".\testy.axf" - 0 Errors, 3 Warning(s).
+Build target 'Target 1'
+compiling dekodowanie.c...
+dekodowanie.c(90): warning:  #223-D: function "eCompareString" declared implicitly
+dekodowanie.c(108): warning:  #223-D: function "eHexStringToUInt" declared implicitly
+dekodowanie.c(125): warning:  #223-D: function "ReplaceCharactersInString" declared implicitly
+compiling main.c...
+main.c(6): warning:  #47-D: incompatible redefinition of macro "NULL" (declared at line 48 of "C:\Keil\ARM\ARMCC\bin\..\include\stdio.h")
+linking...
+Program Size: Code=8416 RO-data=116 RW-data=52 ZI-data=1532  
+".\testy.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling konwersje.c...
+konwersje.c(13): error:  #29: expected an expression
+compiling main.c...
+main.c(6): warning:  #47-D: incompatible redefinition of macro "NULL" (declared at line 48 of "C:\Keil\ARM\ARMCC\bin\..\include\stdio.h")
+".\testy.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling konwersje.c...
+linking...
+Program Size: Code=8416 RO-data=116 RW-data=52 ZI-data=1532  
+".\testy.axf" - 0 Errors, 0 Warning(s).
+Clean started: Project: 'testy'
+   deleting intermediate output files for target 'Target 1'
