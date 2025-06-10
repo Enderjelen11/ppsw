@@ -8,6 +8,7 @@
 
 void LedInit() {
 	IO1DIR = IO1DIR | LED0_bm | LED1_bm | LED2_bm | LED3_bm;
+	IO1CLR = LED0_bm | LED1_bm | LED2_bm | LED3_bm;
 
 	IO1SET = LED0_bm;
 }

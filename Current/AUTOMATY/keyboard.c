@@ -2,8 +2,8 @@
 #include "keyboard.h"
 
 #define BUTTON0_bm (1<<4)
-#define BUTTON1_bm (1<<5)
-#define BUTTON2_bm (1<<6)
+#define BUTTON1_bm (1<<6)
+#define BUTTON2_bm (1<<5)
 #define BUTTON3_bm (1<<7)
 
 void KeyboardInit() {
