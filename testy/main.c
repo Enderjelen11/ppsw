@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "./dekodowanie.h"
-#include "./konwersje.h"
 #include "./operacje_proste.h"
+#include "./konwersje.h"
+#include "./dekodowanie.h"
 
 #define NULL '\0'
 #define NOTEQUAL DIFFERENT
@@ -170,7 +170,7 @@ void TestOf_AppendUIntToString(void){
     char cDest1[20] = "";
     char cExpected1[] = "0x1A3F";
     char cDest2[30] = "Value: ";
-    char cExpected2[] = "Value: 0x2B";
+    char cExpected2[] = "Value: 0x002B";
 
 	printf("bAppendUIntToString\n\n ");
 
@@ -243,23 +243,25 @@ void TestOf_eStringToKeyword(void) {
 
 
 void TestOf_DecodeTokens(void) {
-	char cString[] = "0x10 reset test";
-	ucTokenNr = ucFindTokensInString(cString);
-	ReplaceCharactersInString(cString, DELIMITER_CHARACTER, NULL);
+	char cString[] = "0x10\0reset\0test";
+
+	ucTokenNr = 3;
+	asToken[0].uValue.pcString = &cString[0];  // "0x10"
+	asToken[1].uValue.pcString = &cString[5];  // "reset"
+	asToken[2].uValue.pcString = &cString[11]; // "test"
+
 	DecodeTokens();
 
-	printf("DecodeTokens\n\n ");
-
+	printf("DecodeTokens\n\n");
+    
+    // sprawdzenie poprawnej interpretacji pełnej wiadomości zawierającej tekst, słowo kluczowe i liczbę
 	printf("Test 1 - ");
-	// sprawdzenie poprawnej interpretacji tokena będącego zwykłym łańcuchem znaków
 	if ((asToken[2].eType == STRING) && (asToken[2].uValue.pcString == &cString[11])) printf("OK\n"); else printf("Error\n");
 
 	printf("Test 2 - ");
-	// sprawdzenie poprawnej interpretacji tokena będącego słowem kluczowym
 	if ((asToken[1].eType == KEYWORD) && (asToken[1].uValue.eKeyword == RST)) printf("OK\n"); else printf("Error\n");
 
 	printf("Test 3 - ");
-	// sprawdzenie poprawnej interpretacji tokena będącego liczbą w formacie hex
 	if ((asToken[0].eType == NUMBER) && (asToken[0].uValue.uiValue == 0x10)) printf("OK\n\n"); else printf("Error\n\n");
 }
 
