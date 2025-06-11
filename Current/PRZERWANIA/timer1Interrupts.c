@@ -1,5 +1,5 @@
 #include <LPC21xx.H>
-#include "timer_interrupts.h"
+#include "timer1Interrupts.h"
 
 #define mCOUNTER_ENABLE 0x00000001
 #define mCOUNTER_RESET  0x00000002

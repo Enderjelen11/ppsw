@@ -1,5 +1,5 @@
 #include "led.h"
-#include "timer_interrupts.h"
+#include "timer1Interrupts.h"
 #include "keyboard.h"
 
 void Automat(void) {
@@ -8,9 +8,9 @@ void Automat(void) {
 
 	switch(eLedState) {
 		case STOP:
-			if(eKeyboardRead() == BUTTON_0) {
+			if(ReadButton() == BUTTON_0) {
 				eLedState = LED_LEFT;
-			} else if(eKeyboardRead() == BUTTON_2) {
+			} else if(ReadButton() == BUTTON_2) {
 				eLedState = LED_RIGHT;
 			} else {
 				eLedState = STOP;
@@ -19,7 +19,7 @@ void Automat(void) {
 
 		case LED_LEFT:
 			LedStepLeft();
-			if(eKeyboardRead() == BUTTON_1) {
+			if(ReadButton() == BUTTON_1) {
 				eLedState = STOP;
 			} else {
 				eLedState = LED_LEFT;
@@ -28,7 +28,7 @@ void Automat(void) {
 
 		case LED_RIGHT:
 			LedStepRight();
-			if(eKeyboardRead() == BUTTON_1) {
+			if(ReadButton() == BUTTON_1) {
 				eLedState = STOP;
 			} else {
 				eLedState = LED_RIGHT;
