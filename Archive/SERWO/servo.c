@@ -81,6 +81,7 @@ void ServoInit(unsigned int uiServoFrequency) {
 	LedInit();
 	
 	Timer0Interrupts_Init((1000000 / uiServoFrequency), &Automat);
+    while(sServo.eState == CALLIB){}
 }
 
 void ServoCallib(void) {
@@ -89,4 +90,6 @@ void ServoCallib(void) {
 
 void ServoGoTo(unsigned int uiPosition) {
 	sServo.uiDesiredPosition = uiPosition;
+	sServo.eState = IN_PROGRESS;
+    while(sServo.eState == IN_PROGRESS){}
 }
