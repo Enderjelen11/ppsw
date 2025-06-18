@@ -1,0 +1,121 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Student\Desktop\ppsw\Current\RECIEVE\Jelonek.uvproj
+Project File Date:  06/18/2025
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Startup.s...
+compiling led.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+servo.h(9): warning:  #1-D: last line of file ends without a newline
+main.c(41): warning:  #111-D: statement is unreachable
+compiling servo.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+compiling timer1Interrupts.c...
+compiling uart.c...
+uart.c(32): error:  #40: expected an identifier
+uart.c(32): error:  #70: incomplete type is not allowed
+uart.c(32): error:  #29: expected an expression
+".\Jelonek.axf" - 3 Errors, 5 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling led.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+servo.h(9): warning:  #1-D: last line of file ends without a newline
+main.c(16): warning:  #223-D: function "eReciever_GetStatus" declared implicitly
+main.c(16): error:  #20: identifier "READY" is undefined
+main.c(17): warning:  #223-D: function "Reciever_GetStringCopy" declared implicitly
+main.c(18): error:  #65: expected a ";"
+main.c(22): warning:  #111-D: statement is unreachable
+compiling servo.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+compiling timer1Interrupts.c...
+compiling uart.c...
+uart.c(41): error:  #29: expected an expression
+uart.c(41): error:  #29: expected an expression
+".\Jelonek.axf" - 4 Errors, 7 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+servo.h(9): warning:  #1-D: last line of file ends without a newline
+main.c(17): error:  #167: argument of type "unsigned char (*)[254]" is incompatible with parameter of type "char *"
+main.c(18): error:  #65: expected a ";"
+main.c(22): warning:  #111-D: statement is unreachable
+compiling uart.c...
+uart.c(41): error:  #29: expected an expression
+uart.c(41): error:  #29: expected an expression
+".\Jelonek.axf" - 4 Errors, 3 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+servo.h(9): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #111-D: statement is unreachable
+compiling uart.c...
+uart.c(41): error:  #29: expected an expression
+uart.c(41): error:  #29: expected an expression
+".\Jelonek.axf" - 2 Errors, 3 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+servo.h(9): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #111-D: statement is unreachable
+compiling uart.c...
+uart.c(41): error:  #29: expected an expression
+uart.c(41): error:  #29: expected an expression
+".\Jelonek.axf" - 2 Errors, 3 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+uart.c(42): error:  #29: expected an expression
+uart.c(43): error:  #29: expected an expression
+uart.c(44): error:  #29: expected an expression
+".\Jelonek.axf" - 3 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+uart.c(42): error:  #29: expected an expression
+uart.c(43): error:  #29: expected an expression
+uart.c(44): error:  #29: expected an expression
+".\Jelonek.axf" - 3 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+uart.c(43): error:  #29: expected an expression
+uart.c(44): error:  #29: expected an expression
+uart.c(45): error:  #29: expected an expression
+".\Jelonek.axf" - 3 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+linking...
+Program Size: Code=2896 RO-data=32 RW-data=12 ZI-data=1284  
+FromELF: creating hex file...
+".\Jelonek.axf" - 0 Errors, 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+led.h(4): warning:  #1-D: last line of file ends without a newline
+servo.h(9): warning:  #1-D: last line of file ends without a newline
+main.c(33): error:  #26: too many characters in character constant
+main.c(33): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c(35): warning:  #2548-D: multicharacter character literal (potential portability problem)
+main.c(35): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c(35): error:  #167: argument of type "int" is incompatible with parameter of type "char *"
+main.c(37): error:  #26: too many characters in character constant
+main.c(37): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+main.c(43): warning:  #111-D: statement is unreachable
+compiling uart.c...
+".\Jelonek.axf" - 3 Errors, 7 Warning(s).
+Target not created
+Clean started: Project: 'Jelonek'
+   deleting intermediate output files for target 'Target 1'
