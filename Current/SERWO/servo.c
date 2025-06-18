@@ -1,10 +1,11 @@
 #include <LPC21xx.H>
 #include "led.h"
 #include "timer1Interrupts.h"
+#define OFFSET_val 12
 
 #define DETECTOR_bm (1<<10)
 
-enum ServoState {CALLIB, IDLE, IN_PROGRESS};
+enum ServoState {CALLIB, IDLE, IN_PROGRESS, OFFSET};
 
 struct Servo {
 	enum ServoState eState;
@@ -40,6 +41,16 @@ void Automat(void) {
 				sServo.eState = IDLE;
 			}
 			break;
+		case OFFSET:
+				if(sServo.uiCurrentPosition == OFFSET_val){
+					sServo.uiCurrentPosition = 0;
+					sServo.uiDesiredPosition = 0;
+					sServo.eState = IDLE;
+				}else{
+					LedStepRight();
+					sServo.uiCurrentPosition++;
+				}
+			break;
 		case IDLE:
 			if (sServo.uiCurrentPosition != sServo.uiDesiredPosition) {
 				sServo.eState = IN_PROGRESS;
@@ -68,6 +79,7 @@ void Automat(void) {
 void ServoInit(unsigned int uiServoFrequency) {
 	sServo.eState = CALLIB;
 	LedInit();
+	
 	Timer0Interrupts_Init((1000000 / uiServoFrequency), &Automat);
 }
 
